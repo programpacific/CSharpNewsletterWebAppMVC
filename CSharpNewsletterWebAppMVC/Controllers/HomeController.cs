@@ -43,26 +43,5 @@ namespace CSharpNewsletterWebAppMVC.Controllers
             }
         }
 
-        public ActionResult Admin()
-        {   //Accesses database using Entity Framework.
-            using (NewsletterEntities db = new NewsletterEntities())
-            {
-                var signups = db.SignUps;
-                var SignupVms = new List<SignupVm>();
-                foreach (var signup in signups)
-                {                // Best practice to map to a "view model" and not directly from the database.
-                    var signupVm = new SignupVm();
-                    signupVm.FirstName = signup.FirstName;
-                    signupVm.LastName = signup.LastName;
-                    signupVm.EmailAddress = signup.EmailAddress;
-                    SignupVms.Add(signupVm);
-                }
-                return View(SignupVms);
-            }
-
-        }
-
-
-
     }
 }
