@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSharpNewsletterWebAppMVC
+namespace CSharpNewsletterWebAppMVC.Models
 {
     using System;
     using System.Data.Entity;
